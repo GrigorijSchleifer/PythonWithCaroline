@@ -1,9 +1,7 @@
 # PythonWithCaroline
 This is a repository for python lessons, feel free to join the journey. Thank you Caroline!
 
-## Lesson 1 
-
-
+## [Lesson 1](https://github.com/GrigorijSchleifer/PythonWithCaroline/blob/main/Lesson_1.py)
 
 ```
 You are a doctor who is interested in making patients feel better by giving them drugs, but you only have 4 drugs available. They are:
