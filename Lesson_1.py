@@ -2,7 +2,11 @@ drug_list = [
     "paracetamol",
     "ibuprofen",
     "co-codamol",
-    "vitamin b12"]
+    "vitamin b12",
+    "metoprolol",
+    "penicillin",
+    "aspirin",
+    "suprarenine"]
 
 combinations = []
 
@@ -18,7 +22,8 @@ def task_one(list_of_drugs):
 
 all_combinations = task_one(drug_list)
 # print list with all combinations
-print(all_combinations)
+for i in all_combinations:
+    print(i)
 
 # print a new line for better visibility 
 print("\n")
@@ -27,16 +32,17 @@ print("\n")
 def task_two(list_of_combinations):
     for idx, drug in enumerate(list_of_combinations):
         if drug[0] == drug[1]:
-            print(drug[0])
-            print(drug[1])
             list_of_combinations.pop(idx)
     return list_of_combinations 
 
 unique_combinations = task_two(all_combinations)
 # print unique pairs 
-print(unique_combinations)
+for i in unique_combinations:
+    print(i)
 
-
+# Write a function that takes in a list of drugs and the number of drugs in a combination, and returns all unique combinations that match that user defined number, as a list of x-length
+def task_three(list_of_drugs, combination_number: int):
+    print(f"{list_of_drugs}")
 
 
 
