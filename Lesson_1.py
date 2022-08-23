@@ -40,6 +40,8 @@ unique_combinations = task_two(all_combinations)
 for i in unique_combinations:
     print()
 
+# Write a function that takes in a list of drugs and the number of drugs in a combination, and returns all unique combinations that match that user defined number, as a list of x-length
+
 
 
 
