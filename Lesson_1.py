@@ -27,7 +27,7 @@ for i in all_combinations:
 
 # print a new line for better visibility 
 print("\n")
-
+    
 # Write a function that takes in a list of drugs, returns all unique 2-drug combinations as a list of pairs
 def task_two(list_of_combinations):
     for idx, drug in enumerate(list_of_combinations):
@@ -38,13 +38,7 @@ def task_two(list_of_combinations):
 unique_combinations = task_two(all_combinations)
 # print unique pairs 
 for i in unique_combinations:
-    print(i)
-
-# Write a function that takes in a list of drugs and the number of drugs in a combination, and returns all unique combinations that match that user defined number, as a list of x-length
-def task_three(list_of_drugs, combination_number: int):
-    print(f"{list_of_drugs}")
-
-
+    print()
 
 
 
