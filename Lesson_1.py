@@ -16,20 +16,30 @@ def task_one(list_of_drugs):
             combinations.append([drug, i])
     return combinations
 
-print(task_one(drug_list))
+all_combinations = task_one(drug_list)
+# print list with all combinations
+print(all_combinations)
+
+# print a new line for better visibility 
+print("\n")
 
 # Write a function that takes in a list of drugs, returns all unique 2-drug combinations as a list of pairs
 def task_two(list_of_combinations):
     for idx, drug in enumerate(list_of_combinations):
-        print(drug)
         if drug[0] == drug[1]:
-            print(drug)
+            print(drug[0])
+            print(drug[1])
             list_of_combinations.pop(idx)
-    print(list_of_combinations) 
     return list_of_combinations 
 
-# create combination list 
-unique_combinations = task_one(drug_list)
-
+unique_combinations = task_two(all_combinations)
 # print unique pairs 
-task_two(unique_combinations)
+print(unique_combinations)
+
+
+
+
+
+
+
+
