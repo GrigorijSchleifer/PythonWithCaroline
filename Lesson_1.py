@@ -33,12 +33,14 @@ def task_two(list_of_combinations):
     for idx, drug in enumerate(list_of_combinations):
         if drug[0] == drug[1]:
             list_of_combinations.pop(idx)
+        if drug[::-1] in list_of_combinations:
+            list_of_combinations.pop(idx)
     return list_of_combinations 
 
 unique_combinations = task_two(all_combinations)
 # print unique pairs 
 for i in unique_combinations:
-    print()
+    print(i)
 
 
 
