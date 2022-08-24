@@ -31,9 +31,7 @@ print("\n")
 # Write a function that takes in a list of drugs, returns all unique 2-drug combinations as a list of pairs
 def task_two(list_of_combinations):
     for idx, drug in enumerate(list_of_combinations):
-        if drug[0] == drug[1]:
-            list_of_combinations.pop(idx)
-        if drug[::-1] in list_of_combinations:
+        if drug[0] == drug[1] or drug[::-1] in list_of_combinations:
             list_of_combinations.pop(idx)
     return list_of_combinations 
 
