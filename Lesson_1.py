@@ -37,7 +37,9 @@ print("\n")
 # Write a function that takes in a list of drugs, returns all unique 2-drug combinations as a list of pairs
 def make_unique_combinations(list_of_items: list) -> list:
     """
-    Take list of drugs and return all unique 2-item combinations as a list of pairs
+    Take list of drugs and return all unique 2-item combinations 
+    as a list of pairs and filters out all repeats
+    
     Combination like ['paracetamol', 'ibuprofen'] == ['ibuprofen', 'paracetamol'] will be removed
     
     Args:
