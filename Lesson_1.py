@@ -13,7 +13,7 @@ combinations = []
 
 def make_combinations(list_of_items: list) -> list:
     """
-    Take list of items and return all 2-item combinations 
+    Take list of items and return all 2-item combinations except identical combinations 
 
     Args:
     list_of_items (list): a list of items to be combined
@@ -26,15 +26,14 @@ def make_combinations(list_of_items: list) -> list:
         # second loop to
         for second_item in list_of_items:
             combinations.append([item, second_item])
-        if drug[1] == drug[1] or drug[::-1] in list_of_items:
-            continue    
+            if item == second_item:
+                continue    
     return combinations
 
 all_combinations = make_combinations(drug_list)
 # print list with all combinations
 for i in all_combinations:
     print(i)
-
 # print a new line for better visibility 
 print("\n")
     
