@@ -14,7 +14,7 @@ combinations = []
 def make_combinations(list_of_items: list) -> list:
     """
     Take list of items and return all 2-item combinations 
-    
+
     Args:
     list_of_items (list): a list of items to be combined
 
@@ -23,9 +23,11 @@ def make_combinations(list_of_items: list) -> list:
     """
     # first loop to extract the first item
     for item in list_of_items:
-        # second loop to 
+        # second loop to
         for second_item in list_of_items:
             combinations.append([item, second_item])
+        if drug[1] == drug[1] or drug[::-1] in list_of_items:
+            continue    
     return combinations
 
 all_combinations = make_combinations(drug_list)
@@ -39,7 +41,7 @@ print("\n")
 # Write a function that takes in a list of drugs, returns all unique 2-drug combinations as a list of pairs
 def make_unique_combinations(list_of_items: list) -> list:
     """
-    Take list of items and return all unique 2-item combinations 
+    Take list of drugs and return all unique 2-item combinations as a list of pairs
     
     Args:
     list_of_items (list): a list of items to be filtered for unique combinations
@@ -48,9 +50,7 @@ def make_unique_combinations(list_of_items: list) -> list:
     list: A list of lists of unique pairs
     """
     for idx, drug in enumerate(list_of_items):
-        if drug[0] == drug[1] or drug[::-1] in list_of_items:
-            list_of_items.pop(idx)
-    return list_of_items 
+        return list_of_items 
 
 unique_combinations = make_unique_combinations(all_combinations)
 # print unique pairs 
