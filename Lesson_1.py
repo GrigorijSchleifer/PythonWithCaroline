@@ -60,5 +60,29 @@ for i in unique_combinations:
     print(i)
 
 
+def make_defined_combinations(list_of_items: list, number_of_combinations: int) -> list:
+    """
+    Take in a list of drugs and the number of drugs in a combination
+    And return unique combinations that match that user defined number
 
+    Args:
+    list_of_items (list): a list of items to be filtered for unique combinations
+    user defined number of drugs in a combination
 
+    Return:
+    A list lists of user defined x-length
+    """
+    if number_of_combinations == 0:
+        return [[]]
+     
+    l =[]
+    for i in range(0, len(lst)):
+         
+        m = lst[i]
+        remLst = lst[i + 1:]
+         
+        remainlst_combo = n_length_combo(remLst, n-1)
+        for p in remainlst_combo:
+             l.append([m, *p])    
+
+    
