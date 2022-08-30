@@ -56,8 +56,8 @@ def make_unique_combinations(list_of_items: list) -> list:
 unique_combinations = make_unique_combinations(all_combinations)
 
 # print unique pairs 
-for i in unique_combinations:
-    print(i)
+# for i in unique_combinations:
+#     print(i)
 
 
 def make_defined_combinations(list_of_items: list, number_of_combinations: int) -> list:
@@ -81,8 +81,13 @@ def make_defined_combinations(list_of_items: list, number_of_combinations: int) 
         m = list_of_items[i]
         remLst = list_of_items[i + 1:]
          
-        remainlst_combo = make_defined_combinations(remLst, n-1)
+        remainlst_combo = make_defined_combinations(remLst, number_of_combinations-1)
         for p in remainlst_combo:
-             l.append([m, *p])    
+                l.append([m, *p])    
+    
+    return l
 
-        
+defined_combinations = make_defined_combinations(all_combinations, 3)
+
+for i in defined_combinations:
+    print(i)
