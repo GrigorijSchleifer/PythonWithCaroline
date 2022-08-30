@@ -76,13 +76,13 @@ def make_defined_combinations(list_of_items: list, number_of_combinations: int) 
         return [[]]
      
     l =[]
-    for i in range(0, len(lst)):
+    for i in range(0, len(list_of_items)):
          
-        m = lst[i]
-        remLst = lst[i + 1:]
+        m = list_of_items[i]
+        remLst = list_of_items[i + 1:]
          
-        remainlst_combo = n_length_combo(remLst, n-1)
+        remainlst_combo = make_defined_combinations(remLst, n-1)
         for p in remainlst_combo:
              l.append([m, *p])    
 
-    
+        
