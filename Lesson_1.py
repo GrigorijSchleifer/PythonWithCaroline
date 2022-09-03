@@ -3,7 +3,8 @@ drug_list = [
     "ibuprofen",
     "co-codamol",
     "vitamin b12",
-    "metoprolol"]
+    "metoprolol"
+    ]
 
 # empty list for drug combinations
 combinations = []
@@ -85,30 +86,12 @@ def make_defined_combinations(list_of_items: list, number_of_combinations: int) 
         remainlst_combo = make_defined_combinations(remLst, number_of_combinations-1)
         for p in remainlst_combo:
                 # append will add a list, extend would add all list items, not a whole list
+                # https://scripteverything.com/what-does-asterisk-before-variable-name-mean-in-python/
                 l.append([m, *p])    
     
     return l
 
-list_test = ['one','two', 'three', 'four', 'five', 'six']
+defined_combinations = make_defined_combinations(drug_list, 4)
+for itm in defined_combinations:
+    print(itm)
 
-def no_recursion_test(list_of_items: list) -> list:
-    """
-    Testing the function where length of a list inside a list is defined by the user
-    But not implementing the recursion ... just to see what is going on and what is returned 
-    Without recursion
-    
-    Args: 
-    Same as the make_defined_combinations funciton
-    
-    Return:
-    A list lists of user defined x-length
-    """
-    l = []
-    for i in range(0, len(list_test)):
-        m = list_of_items[i]
-        for p in list_of_items: 
-            l.append([m, *p])
-    for itm in l: 
-        print(itm)
-
-no_recursion_test(list_test)
