@@ -39,7 +39,7 @@ print("\n")
 def make_unique_combinations(list_of_items: list) -> list:
     """
     Take list of drugs and return all unique 2-item combinations 
-    as a list of pairs and filters out all repeats
+    as a list of pairs and filters out all repeat
     
     Combination like ['paracetamol', 'ibuprofen'] == ['ibuprofen', 'paracetamol'] will be removed
     
@@ -60,7 +60,9 @@ unique_combinations = make_unique_combinations(all_combinations)
 # for i in unique_combinations:
 #     print(i)
 
-
+# I am not sure I understand how this method works
+# This is why I am debugging the code at the moment and will not start with task 4 
+# until I have at least a better grasp of the recursion method I am using here ...
 def make_defined_combinations(list_of_items: list, number_of_combinations: int) -> list:
     """
     Take in a list of drugs and the number of drugs in a combination
