@@ -54,6 +54,7 @@ def make_unique_combinations(list_of_items: list) -> list:
             list_of_items.remove(drug[::-1])
     return list_of_items 
 
+
 unique_combinations = make_unique_combinations(all_combinations)
 
 # print unique pairs 

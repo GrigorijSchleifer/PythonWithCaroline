@@ -21,15 +21,9 @@ def make_defined_combinations(list_of_items: list, number_of_combinations: int) 
         # print(remainlst_combo)
         for p in remainlst_combo:
             l.append([m, *p])
-            print(l)
-
     return l
 
 defined_combinations = make_defined_combinations(drug_list, 4)
 
-def loop_test(list_of_items):
-    for itm in list_of_items:
-        m = list_of_items[itm]
-        print(f"{m} is the one")
-
-loop_test(drug_list)
+for itm in defined_combinations:
+    print(itm) 
