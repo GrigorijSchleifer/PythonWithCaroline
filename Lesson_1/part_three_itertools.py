@@ -9,7 +9,7 @@ drug_list = [
     ]
 
 
-unique_comb = [",".join(map(str, comb)) for comb in combinations(drug_list, 3)]
+unique_comb = [",".join(map(str, comb)) for comb in combinations(drug_list, 4)]
 
 for comb in unique_comb:
     print(comb)
