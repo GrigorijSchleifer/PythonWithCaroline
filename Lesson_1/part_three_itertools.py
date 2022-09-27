@@ -8,8 +8,6 @@ drug_list = [
     "metoprolol"
     ]
 
-
-unique_comb = [",".join(map(str, comb)) for comb in combinations(drug_list, 4)]
-
-for comb in unique_comb:
-    print(comb)
+combis = list(combinations(drug_list, 3))
+for itm in combis:
+    print(itm)
